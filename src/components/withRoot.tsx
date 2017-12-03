@@ -35,7 +35,7 @@ function withRoot(BaseComponent: React.ComponentType) {
     render() {
       return (
         <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-          <MuiThemeProvider muiTheme={context.theme} sheetsManager={context.sheetsManager}>
+          <MuiThemeProvider theme={context.theme} sheetsManager={context.sheetsManager}>
             <AppWrapper>
               <BaseComponent />
             </AppWrapper>
