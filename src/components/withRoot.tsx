@@ -1,11 +1,10 @@
 import * as React from 'react';
 import JssProvider from 'react-jss/lib/JssProvider';
-import { withStyles, MuiThemeProvider } from 'material-ui/styles';
+import { withStyles, MuiThemeProvider, StyleRulesCallback } from 'material-ui/styles';
 import { wrapDisplayName } from 'recompose';
 import createContext from '../styles/createContext';
 
-// Apply some reset
-const decorate = withStyles(theme => ({
+const styles: StyleRulesCallback = theme => ({
   '@global': {
     html: {
       background: theme.palette.background.default,
@@ -13,10 +12,13 @@ const decorate = withStyles(theme => ({
       MozOsxFontSmoothing: 'grayscale', // Antialiasing.
     },
     body: {
-      margin: 0,
-    },
-  },
-}));
+      margin: 0
+    }
+  }
+});
+
+// Apply some reset
+const decorate = withStyles(styles);
 
 const AppWrapper = decorate<{ children: JSX.Element }>(props => props.children);
 
