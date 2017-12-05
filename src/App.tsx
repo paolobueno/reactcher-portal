@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import DualContainer from './components/DualContainer';
+import Header from './components/blocks/Header';
+import Navigation from './components/blocks/Navigation';
+import DualContainer from './components/blocks/DualContainer';
 import withRoot from './components/withRoot';
 import { StyleRulesCallback, withStyles } from 'material-ui/styles';
 import { WithStyles } from 'material-ui/styles';
@@ -23,7 +23,7 @@ class App extends React.Component<WithStyles<string>> {
     const Lyrics = () => (
       <Paper
         style={{
-          padding: '1em'
+          padding: '3em'
         }}
       >
         Now this is a story all about how<br />
