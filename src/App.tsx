@@ -23,7 +23,7 @@ class App extends React.Component<WithStyles<string>> {
     const Lyrics = () => (
       <Paper
         style={{
-          padding: '3em'
+          padding: '1em'
         }}
       >
         Now this is a story all about how<br />
